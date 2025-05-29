@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royalplace</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styleReserva.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" type="imagex/png" href="\img\royalicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="container-md d-flex justify-content-between p-2">
+        <div>
+          <a class="navbar-brand" href="index.html">
+            <img class="image-box navbar-brand" src="img/LogoRoyalBranco.png">
+          </a>
+        </div>
+        <nav class="top-bar d-flex align-items-center">
+          <a href="index.html">← Voltar</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>Faça sua reserva!</h2>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <form class="booking-form-container" id="bookingForm">
+          <div class="container">
+
+            <section class="form-card">
+              <h3>Hóspede principal</h3>
+
+              <div class="row g-3">
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo"
+                      autocomplete="name" required>
+                    <label for="nome">Nome Completo</label>
+                  </div>
+                </div>
+
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input type="date" class="form-control" id="data-nascimento" name="nascimento" autocomplete="bday"
+                      required>
+                    <label for="nascimento">Data de Nascimento</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00"
+                      inputmode="numeric" autocomplete="off" maxlength="14" required>
+                    <label for="cpf">CPF</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000"
+                      autocomplete="tel" required>
+                    <label for="telefone">Telefone</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com"
+                      autocomplete="email" required>
+                    <label for="email">E-mail</label>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="form-card">
+              <h3>Reserva</h3>
+
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <select name="hotel" class="form-select" id="hotel" placeholder="hotel" required>
+                      <option value="" disabled selected hidden></option>
+                      <option value="Jardim Europa">Jardim Europa</option>
+                      <option value="Vila Olímpia">Vila Olímpia</option>
+                      <option value="Itaim Bibi">Itaim Bibi</option>
+                    </select>
+                    <label>Hotel</label>
+                  </div>
+
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <select name="quarto" class="form-select" id="quarto" placeholder="Quarto" required>
+                      <option value="" disabled selected hidden></option>
+                      <option value="Quarto Standard l">Quarto Standard l</option>
+                      <option value="Quarto Standard ll">Quarto Standard ll</option>
+                      <option value="Suíte Deluxe">Suíte Deluxe</option>
+                      <option value="Suíte Master">Suíte Master</option>
+                    </select>
+                    <label>Quarto</label>
+                  </div>
+
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="hospedes" name="hospedes" placeholder="Numero" min="1"
+                      max="10" autocomplete="off" required>
+                    <label for="hospedes">Nº de Hóspedes</label>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row g-0">
+
+                <div class="col-md-3">
+                  <div class="form-floating">
+                    <input type="date" class="form-control checkin" id="checkin" name="checkin" min=""
+                      autocomplete="off" required>
+                    <label for="checkin">Check-in</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-floating">
+                    <input class="form-control checkout" type="date" id="checkout" name="checkout" min=""
+                      autocomplete="off" required>
+                    <label for="checkout">Check-out</label>
+                  </div>
+                </div>
+
+              </div>
+
+            </section>
+
+            <section class="form-card">
+              <h3>Pagamento</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="displayDiasHospedado" name="displayDiasHospedado" placeholder="Dias Hospedado" readonly>
+                    <label for="displayDiasHospedado">Dias Hospedado</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="displayValorDiaria" name="displayValorDiaria" placeholder="Valor da diária" readonly>
+                    <label for="displayValorDiaria">Valor da diária (R$)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-3 "> 
+                <div class="col-md-6"> 
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="displayValorAPagar" name="displayValorAPagar" placeholder="Valor a pagar" readonly>
+                    <label for="displayValorAPagar">Valor a pagar (R$)</label>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="sticky-wrapper">
+          <aside class="summary-card form-card">
+            <h3>Resumo</h3>
+            <ul class="list-unstyled mb-4">
+              <li><strong>Hóspede: </strong><span id="resumo-nome">-</span></li>
+              <li><strong>Hotel: </strong><span id="resumo-hotel">-</span></li>
+              <li><strong>Quarto: </strong><span id="resumo-quarto">-</span></li>
+              <li><strong>Número de noites: </strong><span id="resumo-num-noites">-</span></li>
+              <li><strong>Subtotal: </strong><span id="resumo-subtotal">-</span></li>
+            </ul>
+          </aside>
+          <button class="confirm-button" type="submit" form="bookingForm">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-5">
+    <img class="footer-logo" src="img/LogoRoyalBranco.png" style="height: 37.5px; width: auto;">
+  </footer>
+
+  <script src="js/scriptReserva.js"></script>
+
+</body>
+
+</html>

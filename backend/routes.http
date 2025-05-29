@@ -1,0 +1,9 @@
+
+### Listar todos os quartos
+GET http://localhost:3332/quarto
+
+### Buscar quartos por número ou tipo (query parameter)
+##GET http://localhost:3332/quarto?search=Deluxe
+
+##
+GET http://localhost:3332/quarto?tipo=Quarto Standard l
